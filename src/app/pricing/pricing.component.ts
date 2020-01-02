@@ -9,7 +9,7 @@ import { DataService } from '../data.service';
 })
 export class PricingComponent implements OnInit {
 
-  users = {};
+  users:any = Object;
   count = {};
   constructor(private data:DataService ) { }
 
