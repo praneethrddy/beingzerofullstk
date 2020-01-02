@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
+
 
 @Component({
   selector: 'app-pricing',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PricingComponent implements OnInit {
 
-  constructor() { }
+  users = {};
+  count = {};
+  constructor(private data:DataService ) { }
 
   ngOnInit() {
+   this.data.getData().subscribe(d => {
+    this.users['arr'] = d;
+    //alert(this.users.arr[0].id);
+    this.count = this.users.arr[0].id;
+    });
   }
 
 }
