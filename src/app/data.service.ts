@@ -9,6 +9,6 @@ export class DataService {
   constructor(private http:HttpClient) {   }
   
   getData(){
-    return this.http.get('https://api.github.com/users?since=135');
+    return this.http.get('https://api.github.com/users/praneethrddy');
   }
 }
